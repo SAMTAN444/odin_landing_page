@@ -200,3 +200,13 @@ nav ul li span:nth-child(4) {
     margin-top: 10px;
 }
 
+.container2 {
+    background-image: url('../images/pexels-aleksandar2.jpg');
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container, .container2 {
+    overflow: hidden;
+}
+
