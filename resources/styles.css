@@ -159,4 +159,44 @@ nav ul li span:nth-child(4) {
     border: 10px solid goldenrod;
 }
 
+.container {
+    text-align: center;
+    background-color: goldenrod;
+}
+
+.content {
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.center {
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+
+.cards {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.content-img {
+    width: 250px;
+    height: 280px;
+    border-radius: 50%;
+    border: 10px solid black;
+    overflow: hidden;
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+}
+.cards p {
+    margin-top: 10px;
+}
 
