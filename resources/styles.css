@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background_pexels.jpeg');
+    background-size: 50%;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img{
+    height:130px;
+    width: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #4c4c4c;
+    box-sizing: border-box;
+    object-fit: cover;
+}
