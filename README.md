@@ -1,0 +1,1 @@
+This is my odin project odin_landing_page. I learnt about button animations, how to keep the background still while scrolling, making circular objects and using flexbox. Thanks odin for this learning opportunity
