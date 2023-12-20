@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 
 
@@ -19,6 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    position: relative;
 }
 
 
@@ -79,7 +80,7 @@ nav a {
     height: 5px;
     background-color: goldenrod;
     position: absolute;
-    bottom: 550px;
+    bottom: -10px
 }
 
 .intro {
@@ -165,7 +166,7 @@ nav ul li span:nth-child(4) {
     border: 10px solid goldenrod;
 }
 
-.container {
+.container1 {
     text-align: center;
     background-color: goldenrod;
 }
@@ -215,7 +216,7 @@ nav ul li span:nth-child(4) {
     width: 100%;
 }
 
-.container, .container2 {
+.container1, .container2, .sign-up-section {
     overflow: hidden;
 }
 
@@ -238,10 +239,10 @@ nav ul li span:nth-child(4) {
   /*BLUE BG*/
   background: radial-gradient(
     ellipse at center,
-    rgba(0, 128, 172, 1) 0%,
-    rgba(0, 128, 172, 1) 70%,
-    rgba(0, 128, 172, 0) 70.3%
-  );
+    rgba(218, 165, 32, 1) 0%,    /* Goldenrod color start */
+    rgba(218, 165, 32, 1) 70%,   /* Goldenrod color at 70% */
+    rgba(218, 165, 32, 0) 70.3%  /* Transparent at 70.3% */
+);
   /*RED BG
   background: radial-gradient(
     ellipse at center,
@@ -258,6 +259,7 @@ nav ul li span:nth-child(4) {
   height: 100%;
   font-size: 21px;
   line-height: 1.25;
+  color: black;
   padding: 0;
   text-align: center;
   font-style: italic;
@@ -314,6 +316,7 @@ nav ul li span:nth-child(4) {
   text-align: center;
   font-style: italic;
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  color: black;
 }
 
 .quote-wrapper::before {
@@ -327,7 +330,7 @@ nav ul li span:nth-child(4) {
   left: 0;
   z-index: 1;
   font-family: sans-serif, serif;
-  color: #ccc;
+  color:  black;
   opacity: 0.9;
 }
 
@@ -349,3 +352,110 @@ nav ul li span:nth-child(4) {
     bottom: 32px;
   }
 }
+
+.sign-up-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-top: 0px;
+    height: 250px;
+    width: 100%;
+}
+
+.small {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    width: 380px;
+    gap: 10px;
+    --b: 5px;   /* the border thickness */
+    --h: 1.8em; /* the height */
+    align-items: center;
+  }
+  
+  .buttons button {
+    --_c: #88C100;
+    flex: calc(1.25 + var(--_s,0));
+    min-width: 0;
+    font-size: 40px;
+    font-weight: bold;
+    height: var(--h);
+    cursor: pointer;
+    color: var(--_c);
+    border: var(--b) solid var(--_c);
+    background: 
+      conic-gradient(at calc(100% - 1.3*var(--b)) 0,var(--_c) 209deg, #0000 211deg) 
+      border-box;
+    clip-path: polygon(0 0,100% 0,calc(100% - 0.577*var(--h)) 100%,0 100%);
+    padding: 0 calc(0.288*var(--h)) 0 0;
+    margin: 0 calc(-0.288*var(--h)) 0 0;
+    box-sizing: border-box;
+    transition: flex .4s;
+  }
+  .buttons button + button {
+    --_c: #FF003C;
+    flex: calc(.75 + var(--_s,0));
+    background: 
+      conic-gradient(from -90deg at calc(1.3*var(--b)) 100%,var(--_c) 119deg, #0000 121deg) 
+      border-box;
+    clip-path: polygon(calc(0.577*var(--h)) 0,100% 0,100% 100%,0 100%);
+    margin: 0 0 0 calc(-0.288*var(--h));
+    padding: 0 0 0 calc(0.288*var(--h));
+  }
+  .buttons button:focus-visible {
+    outline-offset: calc(-2*var(--b));
+    outline: calc(var(--b)/2) solid #000;
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  .buttons button:focus-visible + button {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  .buttons button:has(+ button:focus-visible) {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+  }
+  button:hover,
+  button:active:not(:focus-visible) {
+    --_s: .75;
+  }
+  button:active {
+    box-shadow: inset 0 0 0 100vmax var(--_c);
+    color: #fff;
+  }
+  
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.copyright {
+    color: goldenrod;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+ 
